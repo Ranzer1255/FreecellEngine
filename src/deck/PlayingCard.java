@@ -1,5 +1,9 @@
 package deck;
 
+/**
+ * @author Bobby
+ *
+ */
 public class PlayingCard extends Card {
 
 	static public final int ACE = 1;

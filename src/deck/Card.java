@@ -1,5 +1,10 @@
 package deck;
 
+
+/**
+ * @author Bobby
+ *
+ */
 public class Card {
 
 	protected int value;
