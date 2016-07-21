@@ -25,6 +25,10 @@ public class PlayingCard {
 		return SUIT;
 	}
 	
+	public Rank getRank(){
+		return RANK;
+	}
+	
 	@Override
 	public String toString() {
 		return RANK.toString() + " of " + SUIT.toString() + "s!";
