@@ -1,6 +1,6 @@
 package decks;
 
-public enum RankType {
+public enum Rank {
 	
 	ACE(1),
 	TWO(2),
@@ -18,7 +18,7 @@ public enum RankType {
 
 	public final int RANK;
 	
-	RankType(int value){
+	Rank(int value){
 		this.RANK=value;
 	}
 	

@@ -1,6 +1,6 @@
 package decks;
 
-public enum SuitType {
+public enum Suit {
 
 	SPADES(1),
 	DIAMONDS(2),
@@ -9,7 +9,7 @@ public enum SuitType {
 	
 	final int SUIT;
 	
-	SuitType(int value){
+	Suit(int value){
 		this.SUIT=value;
 	}
 	

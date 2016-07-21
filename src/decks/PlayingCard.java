@@ -6,23 +6,32 @@ package decks;
  */
 public class PlayingCard {
 
-	private final SuitType SUIT;
-	private final RankType RANK;
+	private final Suit SUIT;
+	private final Rank RANK;
+	private final Color COLOR;
 	
 	
-	public PlayingCard(SuitType suit, RankType rank) {
+	public PlayingCard(Suit s, Rank r) {
 		super();
-		this.SUIT = suit;
-		this.RANK = rank;
+		this.SUIT = s;
+		this.RANK = r;
+		if (SUIT==Suit.CLUBS||SUIT==Suit.SPADES)
+			this.COLOR=Color.BLACK;
+		else
+			this.COLOR=Color.RED;
 	}
 		
-	public SuitType getSuit() {
+	public Suit getSuit() {
 		return SUIT;
 	}
 	
 	@Override
 	public String toString() {
 		return RANK.toString() + " of " + SUIT.toString() + "s!";
+	}
+	
+	public Color getColor(){
+		return COLOR;
 	}
 
 }

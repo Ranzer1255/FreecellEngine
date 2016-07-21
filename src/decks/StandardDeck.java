@@ -16,8 +16,8 @@ public class StandardDeck {
 	public StandardDeck(){
 		super();
 		deck = new ArrayList<PlayingCard>();
-		for (SuitType suit : SuitType.values()) {
-			for (RankType rank : RankType.values()) {
+		for (Suit suit : Suit.values()) {
+			for (Rank rank : Rank.values()) {
 				deck.add(new PlayingCard(suit, rank));				
 			}
 		} 
