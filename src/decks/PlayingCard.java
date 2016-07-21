@@ -31,7 +31,7 @@ public class PlayingCard {
 	
 	@Override
 	public String toString() {
-		return RANK.toString() + " of " + SUIT.toString() + "s!";
+		return RANK.toString() + " of " + SUIT.toString() + "s";
 	}
 	
 	public Color getColor(){

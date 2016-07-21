@@ -6,4 +6,6 @@ public class Freecell {
 
 	private StandardDeck deck = new StandardDeck();
 	
+	
+	
 }

@@ -16,14 +16,14 @@ public enum Rank {
 	QUEEN(12),
 	KING(13);
 
-	public final int RANK;
+	public final int VALUE;
 	
 	Rank(int value){
-		this.RANK=value;
+		this.VALUE=value;
 	}
 	
 	public String toString() {
-		switch (RANK){
+		switch (VALUE){
 		case 1:
 			return "Ace";
 		case 11:
@@ -33,7 +33,7 @@ public enum Rank {
 		case 13:
 			return "King";
 		default:
-			return ""+this.RANK;
+			return ""+this.VALUE;
 		}
 	}
 	
