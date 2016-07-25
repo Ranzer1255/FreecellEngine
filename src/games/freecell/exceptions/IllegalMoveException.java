@@ -13,6 +13,6 @@ public class IllegalMoveException extends FreecellException {
 		super("This Move is illegal!");
 	}
 	public IllegalMoveException(PlayingCard e){
-		super("the " + e.toString() + " cannot go here!"); 
+		super("the " + e + " cannot go here!"); 
 	}
 }
