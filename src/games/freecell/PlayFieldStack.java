@@ -3,10 +3,9 @@ package games.freecell;
 import java.util.Stack;
 
 import decks.PlayingCard;
-import games.freecell.exceptions.FreecellException;
 import games.freecell.exceptions.IllegalMoveException;
 
-public class CardPile {
+public class PlayFieldStack {
 
 	private Stack<PlayingCard> pile = new Stack<PlayingCard>();
 	
@@ -31,16 +30,25 @@ public class CardPile {
 	 * @param c PlayingCard to add to the pile
 	 * @throws IllegalMoveException if move is invalid
 	 */
-	public void PlaceCard(PlayingCard c)throws FreecellException{ 
+	public void PlaceCard(PlayingCard newCard)throws IllegalMoveException{ 
 		
-		PlayingCard topCard = pile.peek();
-		if (c.getColor()!=topCard.getColor() && c.getRank().VALUE == topCard.getRank().VALUE-1){
-			pile.push(c);
+		if (isLegalMove(newCard, pile.peek())){
+			pile.push(newCard);
 		} else {
-			throw new IllegalMoveException(c);
+			throw new IllegalMoveException(newCard); //TODO look over the message of illegalMove, this may need to change
 		}
 		
 	
+	}
+
+	private boolean isLegalMove(PlayingCard newCard, PlayingCard existingCard) {
+		
+		if(newCard.getColor() == existingCard.getColor()){ // check color
+			return false;
+		} else if(newCard.getRank().value()!=existingCard.getRank().value()-1){// check if next lower in rank
+			return false;
+		} else 
+			return true;
 	}
 
 }

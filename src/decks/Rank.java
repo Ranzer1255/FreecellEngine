@@ -2,39 +2,35 @@ package decks;
 
 public enum Rank {
 	
-	ACE(1),
-	TWO(2),
-	TRHEE(3),
-	FOUR(4),
-	FIVE(5),
-	SIX(6),
-	SEVEN(7),
-	EIGHT(8),
-	NINE(9),
-	TEN(10),
-	JACK(11),
-	QUEEN(12),
-	KING(13);
+	ACE		(1 , "Ace"),
+	TWO		(2 , "Two"),
+	TRHEE	(3 , "Three"),
+	FOUR	(4 , "Four"),
+	FIVE	(5 , "Five"),
+	SIX		(6 , "Six"),
+	SEVEN	(7 , "Seven"),
+	EIGHT	(8 , "Eight"),
+	NINE	(9 , "Nine"),
+	TEN		(10, "Ten"),
+	JACK	(11, "Jack"),
+	QUEEN	(12, "Queen"),
+	KING	(13, "King");
 
-	public final int VALUE;
+	private int value;
+	private String name;
 	
-	Rank(int value){
-		this.VALUE=value;
+	
+	Rank(int value, String string){
+		this.value=value;
+		this.name = string;
 	}
 	
 	public String toString() {
-		switch (VALUE){
-		case 1:
-			return "Ace";
-		case 11:
-			return "Jack";
-		case 12:
-			return "Queen";
-		case 13:
-			return "King";
-		default:
-			return ""+this.VALUE;
-		}
+		return name;
+	}
+	
+	public int value(){
+		return value;
 	}
 	
 }
