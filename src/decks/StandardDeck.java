@@ -14,7 +14,6 @@ public class StandardDeck {
 	 * Generates a new Sorted Deck of Standard Playing Cards.
 	 */
 	public StandardDeck(){
-		super();
 		deck = new ArrayList<PlayingCard>();
 		for (Suit suit : Suit.values()) {
 			for (Rank rank : Rank.values()) {
