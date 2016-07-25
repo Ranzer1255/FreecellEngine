@@ -2,10 +2,10 @@ package decks;
 
 public enum Suit {
 
-	SPADES(1),
-	DIAMONDS(2),
-	CLUBS(3),
-	HEARTS(4);
+	SPADES(0),
+	DIAMONDS(1),
+	CLUBS(2),
+	HEARTS(3);
 	
 	final int SUIT;
 	
