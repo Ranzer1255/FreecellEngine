@@ -15,9 +15,9 @@ public class FreecellGame {
 	private Map<Suit, CardPile> foundation;
 
 	public FreecellGame(){
-		instanciatePlayAreaStack();
-		instaciateFreecell();
-		instaciateFoundation();
+		initilizePlayAreaStack();
+		initilizeFreecell();
+		initilizeFoundation();
 	}
 
 	public void newGame(){
@@ -29,19 +29,19 @@ public class FreecellGame {
 		return false; //TODO
 	}
 
-	private void instanciatePlayAreaStack() {
+	private void initilizePlayAreaStack() {
 		for (CardPile cardPile : playAreaStack) {
 			cardPile = new PlayFieldStack();
 		}
 	}
 
-	private void instaciateFreecell() {
+	private void initilizeFreecell() {
 		for (CardPile cardPile : freecell) {
 			cardPile = new Freecell();
 		}
 	}
 
-	private void instaciateFoundation() {
+	private void initilizeFoundation() {
 		foundation = new HashMap<Suit,CardPile>(4,1);
 		
 		for (Suit s : Suit.values()) {
