@@ -24,7 +24,7 @@ public abstract class CardPile {
 
 	/**
 	 * takes the top card off the pile
-	 * @return the current Top card off the pile. removing it in the process.
+	 * @return the current Top card off the pile. removing it from the pile.
 	 */
 	public PlayingCard takeCard() {
 		return pile.pop();
