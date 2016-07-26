@@ -37,6 +37,11 @@ public class PlayingCard {
 	public Color getColor(){
 		return COLOR;
 	}
+	
+	public boolean equals(PlayingCard pc){
+		if (this.getRank()==pc.getRank()&&this.getSuit()==pc.getSuit()) return true;
+		else return false;
+	}
 
 }
 
