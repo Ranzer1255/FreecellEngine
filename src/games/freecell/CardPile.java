@@ -31,7 +31,7 @@ public abstract class CardPile {
 	}
 
 	/**
-	 * Places a card on top of the pile, only if it follows the rules of the specific pile.
+	 * Places a card on top of the pile, only if it follows the rules of the current implimentation.
 	 * 
 	 * @param c PlayingCard to add to the pile
 	 * @throws IllegalMoveException if move is invalid
