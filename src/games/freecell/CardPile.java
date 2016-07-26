@@ -44,4 +44,8 @@ public abstract class CardPile {
 			throw new IllegalMoveException(newCard); //TODO look over the message of illegalMove, this may need to change
 		}
 	}
+	
+	public PlayingCard topCard(){
+		return pile.peek();
+	}
 }
