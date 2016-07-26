@@ -2,7 +2,7 @@ package games.freecell;
 
 import decks.PlayingCard;
 
-public class Freecell extends CardPile {
+public class FreecellPile extends CardPile {
 	
 	@Override
 	protected boolean isLegalMove(PlayingCard newCard, PlayingCard existingCard) {

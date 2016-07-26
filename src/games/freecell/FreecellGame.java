@@ -37,7 +37,7 @@ public class FreecellGame {
 
 	private void initilizeFreecell() {
 		for (CardPile cardPile : freecell) {
-			cardPile = new Freecell();
+			cardPile = new FreecellPile();
 		}
 	}
 
