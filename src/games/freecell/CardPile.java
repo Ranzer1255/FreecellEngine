@@ -12,7 +12,7 @@ public abstract class CardPile {
 	protected abstract boolean isLegalMove(PlayingCard newCard, PlayingCard existingCard);
 
 	public CardPile() {
-		pile = new LinkedList<PlayingCard>();		
+		pile = new LinkedList<PlayingCard>();
 	}
 
 	/**
