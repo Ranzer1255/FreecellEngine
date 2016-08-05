@@ -11,7 +11,7 @@ public class PlayFieldStack extends CardPile {
 			return true;
 		}else if(newCard.getColor() == existingCard.getColor()){ // check color
 			return false;
-		} else if(newCard.getRank().value()!=existingCard.getRank().value()-1){// check if next lower in rank
+		} else if(newCard.value()!=existingCard.value()-1){// check if next lower in rank
 			return false;
 		} else 
 			return true;

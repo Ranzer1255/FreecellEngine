@@ -23,7 +23,7 @@ public class Foundation extends CardPile {
 			}
 		} else if(newCard.getSuit()!=SUIT){
 			return false;
-		} else if (newCard.getRank().value()!=existingCard.getRank().value()+1){
+		} else if (newCard.value()!=existingCard.value()+1){
 			return false;
 		} 
 

@@ -2,29 +2,24 @@ package decks;
 
 public enum Suit {
 
-	SPADES(0),
-	DIAMONDS(1),
-	CLUBS(2),
-	HEARTS(3);
+	SPADES(Color.BLACK, "Spade"),
+	DIAMONDS(Color.RED, "Diamond"),
+	CLUBS(Color.BLACK, "Club"),
+	HEARTS(Color.RED, "Heart");
 	
-	final int SUIT;
+	final Color COLOR;
+	final String NAME;
 	
-	Suit(int value){
-		this.SUIT=value;
+	Suit(Color color, String name){
+		this.COLOR=color;
+		this.NAME=name;
+	}
+	
+	public Color getColor(){
+		return COLOR;
 	}
 	
 	public String toString(){
-		switch(this.SUIT){
-			case 1:
-				return "Spade";
-			case 2:
-				return "Diamond";
-			case 3:
-				return "Club";
-			case 4:
-				return "Heart";
-			default: //This should never happen
-				return "err";
-		}
+			return NAME;
 	}
 }
