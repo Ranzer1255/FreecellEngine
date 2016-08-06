@@ -22,4 +22,11 @@ public enum Suit {
 	public String toString(){
 			return NAME;
 	}
+	
+	public enum Color {
+		
+		RED, BLACK;
+
+	}
+
 }
