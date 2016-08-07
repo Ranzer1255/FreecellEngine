@@ -53,9 +53,9 @@ public class StandardDeck {
 		discard.clear();
 		
 		//shuffle the deck
-		for(int i = deck.size(); i>2; i--){
+		for(int i = deck.size()-1; i>2; i--){
 			
-			int s = ThreadLocalRandom.current().nextInt(i);
+			int s = ThreadLocalRandom.current().nextInt(i+1);
 			
 			PlayingCard t = deck.get(s);
 			deck.set(s, deck.get(i));
@@ -65,6 +65,11 @@ public class StandardDeck {
 
 	public int getCardsInDeck(){
 		return deck.size();
+	}
+
+	public boolean deckIsEmpty() {
+		
+		return deck.isEmpty();
 	}
 	
 	
