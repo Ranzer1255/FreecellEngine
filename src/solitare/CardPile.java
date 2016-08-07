@@ -47,5 +47,13 @@ public abstract class CardPile {
 		return pile.peek();
 	}
 
+	/**
+	 * the size of the CardPile
+	 * @return the size of the Pile of cards
+	 */
+	public int size() {
+		return pile.size();
+	}
+
 	protected abstract boolean isLegalMove(PlayingCard newCard, PlayingCard existingCard);
 }

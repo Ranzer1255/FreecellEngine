@@ -5,13 +5,14 @@ import java.util.Map;
 
 import decks.StandardDeck;
 import decks.Suit;
+import decks.exceptions.EmptyDeckException;
 import solitare.CardPile;
 import solitare.Foundation;
 import solitare.PlayFieldStack;
 
 public class FreecellGame {
 
-	private StandardDeck deck;
+	private StandardDeck deck = new StandardDeck();
 	
 	private CardPile[] playAreaStack = new CardPile[8];
 	private CardPile[] freecell		 = new CardPile[4];
@@ -24,8 +25,19 @@ public class FreecellGame {
 	}
 
 	public void newGame(){
-	
-		//TODO
+
+		deck.shuffle();
+		
+		//deal to play area
+		while(!deck.deckIsEmpty()){
+			for (CardPile cp :playAreaStack){
+				try {
+					cp.deal(deck.draw());
+				} catch (EmptyDeckException e) {
+					break;
+				}
+			}
+		}
 	}
 
 	public boolean moveCard(){
@@ -33,14 +45,14 @@ public class FreecellGame {
 	}
 
 	private void initilizePlayAreaStack() {
-		for (CardPile cardPile : playAreaStack) {
-			cardPile = new PlayFieldStack();
+		for (int i = 0; i<playAreaStack.length;i++) {
+			playAreaStack[i] = new PlayFieldStack();
 		}
 	}
 
 	private void initilizeFreecell() {
-		for (CardPile cardPile : freecell) {
-			cardPile = new FreecellPile();
+		for (int i = 0; i<freecell.length;i++) {
+			freecell[i] = new FreecellPile();
 		}
 	}
 
