@@ -1,4 +1,4 @@
-package solitare.freecell;
+package solitare;
 
 import java.util.Deque;
 import java.util.LinkedList;

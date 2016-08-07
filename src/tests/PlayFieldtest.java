@@ -9,8 +9,8 @@ import decks.PlayingCard;
 import decks.Rank;
 import decks.StandardDeck;
 import decks.Suit;
-import solitare.freecell.CardPile;
-import solitare.freecell.PlayFieldStack;
+import solitare.CardPile;
+import solitare.PlayFieldStack;
 import solitare.freecell.exceptions.IllegalMoveException;
 
 public class PlayFieldtest {

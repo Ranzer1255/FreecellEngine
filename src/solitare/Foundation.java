@@ -1,4 +1,4 @@
-package solitare.freecell;
+package solitare;
 
 import decks.PlayingCard;
 import decks.Rank;

@@ -5,6 +5,9 @@ import java.util.Map;
 
 import decks.StandardDeck;
 import decks.Suit;
+import solitare.CardPile;
+import solitare.Foundation;
+import solitare.PlayFieldStack;
 
 public class FreecellGame {
 

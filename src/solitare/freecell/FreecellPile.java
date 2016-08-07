@@ -1,6 +1,7 @@
 package solitare.freecell;
 
 import decks.PlayingCard;
+import solitare.CardPile;
 
 public class FreecellPile extends CardPile {
 	
