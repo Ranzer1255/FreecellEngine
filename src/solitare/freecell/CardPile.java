@@ -1,9 +1,9 @@
-package games.freecell;
+package solitare.freecell;
 
 import java.util.Deque;
 import java.util.LinkedList;
 import decks.PlayingCard;
-import games.freecell.exceptions.IllegalMoveException;
+import solitare.freecell.exceptions.IllegalMoveException;
 
 public abstract class CardPile {
 

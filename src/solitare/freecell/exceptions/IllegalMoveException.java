@@ -1,4 +1,4 @@
-package games.freecell.exceptions;
+package solitare.freecell.exceptions;
 
 import decks.PlayingCard;
 

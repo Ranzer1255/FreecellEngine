@@ -1,4 +1,4 @@
-package games.freecell;
+package solitare.freecell;
 
 import decks.PlayingCard;
 

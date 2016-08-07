@@ -1,4 +1,4 @@
-package games.freecell.exceptions;
+package solitare.freecell.exceptions;
 
 @SuppressWarnings("serial")
 public class FreecellException extends Exception {
