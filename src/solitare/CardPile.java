@@ -39,7 +39,7 @@ public abstract class CardPile {
 		if (isLegalMove(newCard, pile.peek())){
 			pile.push(newCard);
 		} else {
-			throw new IllegalMoveException(newCard); //TODO look over the message of illegalMove, this may need to change
+			throw new IllegalMoveException(newCard); 
 		}
 	}
 	
