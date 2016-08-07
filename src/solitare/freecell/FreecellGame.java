@@ -2,7 +2,6 @@ package solitare.freecell;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import decks.StandardDeck;
 import decks.Suit;
 import decks.exceptions.EmptyDeckException;
