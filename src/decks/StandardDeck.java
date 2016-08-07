@@ -1,8 +1,11 @@
 package decks;
 
+import java.nio.channels.ShutdownChannelGroupException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.concurrent.ThreadLocalRandom;
+
+import decks.exceptions.EmptyDeckException;
 
 /**
  * @author Bobby
@@ -31,8 +34,10 @@ public class StandardDeck {
 	/**
 	 * draws the top card from the deck and moves it to the discard
 	 * @return Top card in Deck.
+	 * @throws EmptyDeckException when there are no cards in the deck. call {@link #shuffle()} to reset the deck
 	 */
-	public PlayingCard draw(){ 
+	public PlayingCard draw() throws EmptyDeckException{ 
+		if (deck.isEmpty()){ throw new EmptyDeckException();}
 		PlayingCard c = deck.remove(0);
 		discard.push(c);
 		return c;
