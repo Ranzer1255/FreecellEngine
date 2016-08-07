@@ -1,7 +1,7 @@
 package decks;
 
 import java.util.ArrayList;
-import java.util.Stack;
+import java.util.LinkedList;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -11,14 +11,16 @@ import java.util.concurrent.ThreadLocalRandom;
 public class StandardDeck {
 
 	private ArrayList<PlayingCard> deck;
-	private Stack<PlayingCard> discard;
+	private LinkedList<PlayingCard> discard;
 	
 
 	/**
 	 * Generates a new Sorted Deck of Standard Playing Cards.
 	 */
 	public StandardDeck(){
-		deck = new ArrayList<PlayingCard>();
+		deck = new ArrayList<>();
+		discard = new LinkedList<>();
+		
 		for (Suit suit : Suit.values()) {
 			for (Rank rank : Rank.values()) {
 				deck.add(new PlayingCard(suit, rank));				
@@ -28,7 +30,7 @@ public class StandardDeck {
 	
 	/**
 	 * draws the top card from the deck and moves it to the discard
-	 * @return
+	 * @return Top card in Deck.
 	 */
 	public PlayingCard draw(){ 
 		PlayingCard c = deck.remove(0);
